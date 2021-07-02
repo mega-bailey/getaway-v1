@@ -1,16 +1,33 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import AllTrips from './AllTrips';
 
 const Home = () => {
 // const [name, setName] = useState('Stranger'); 
-
 // const handleClick = () => {
-//     setName('luigi')
+//     setName('yourname')
 // }
-const [trips, setTrips] = useState([
-    { title: 'The Title 1', body: 'alsdjfas;ldfjas;ldfjas;dlkjf', author: 'me', id:'1'},
-    { title: 'The Title 2', body: 'alsdjfas;ldfjas;ldfjas;dlkjf', author: 'you', id:'2'},
-    { title: 'The Title 3', body: 'alsdjfas;ldfjas;ldfjas;dlkjf', author: 'him', id:'3'},
-])
+const [trips, setTrips] = useState(null); 
+const [isPending, setIsPending] = useState(true);
+const [error, setError] = useState(null);
+
+useEffect(() => {
+    fetch('http://localhost:8000/trips')
+    .then(res => {
+        if(!res.ok){
+            throw Error('Could not fetch data');
+        }
+        return res.json()
+    })
+    .then(data => {
+       setTrips(data);
+       setIsPending(false);
+       setError(null);
+    })
+    .catch(err => {
+        setIsPending(false);
+        setError(err.message);
+    })
+}, []);
 
     return ( 
         <div className="home">
@@ -18,13 +35,11 @@ const [trips, setTrips] = useState([
             <h1>Getaway</h1>
             {/* <p>{name}</p> */}
        <h2>Share your trips with others and gather inspiration for your next getaway.</h2>
-        {trips.map((trip) => (
-            <div className="trip-preview" key={trip.id}>
-                <h2>{trip.title}</h2>
-                <p>Created by: {trip.author}</p>
-            </div>
-        ))}
-
+       {isPending && <div>Loading...</div>}
+       {trips && <AllTrips trips={trips} title="All Trips"/> } {/* props */}
+       {error && <div>{error}</div>}
+        {/* <button onClick={() => setName('me')}>change name</button>
+ <p>{name}</p> */}
         </div>
      );
 }

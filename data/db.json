@@ -1,0 +1,23 @@
+{
+    "trips": [
+        {
+            "title": "Hawaii",
+            "body": "laskjdlfa lasjdflasj falsjdflasjdf;alsjdfa;lsjfda;lsjdf;alskdjfas;ldfja;lsjdfa;lsdjfasl;jdf;asljf;asjf;asjfa;sljfd;aslfja;slfja;sldfjlasjfl;asjf;asldjf;asljdfa;skdjfal;sjdfal;skdfjas;ldkfja;slkfjasljfa;lsjf;asljfalsjdfoqwjeofasf;dasdfjqwjfalsjdfoasjdfliasujjqwe;ofja;sldghoqigvopiegnpowniuegopwrgcwpmgyorwenprovtuypenorcutowutpoweiut",
+            "author": "me",
+            "id": 1
+        },
+        {
+            "title": "New Zealand",
+            "body": "laskjdlfa lasjdflasj falsjdflasjdf;alsjdfa;lsjfda;lsjdf;alskdjfas;ldfja;lsjdfa;lsdjfasl;jdf;asljf;asjf;asjfa;sljfd;aslfja;slfja;sldfjlasjfl;asjf;asldjf;asljdfa;skdjfal;sjdfal;skdfjas;ldkfja;slkfjasljfa;lsjf;asljfalsjdfoqwjeofasf;dasdfjqwjfalsjdfoasjdfliasujjqwe;ofja;sldghoqigvopiegnpowniuegopwrgcwpmgyorwenprovtuypenorcutowutpoweiut",
+            "author": "you",
+            "id": 2
+        },
+        {
+            "title": "London",
+            "body": "laskjdlfa lasjdflasj falsjdflasjdf;alsjdfa;lsjfda;lsjdf;alskdjfas;ldfja;lsjdfa;lsdjfasl;jdf;asljf;asjf;asjfa;sljfd;aslfja;slfja;sldfjlasjfl;asjf;asldjf;asljdfa;skdjfal;sjdfal;skdfjas;ldkfja;slkfjasljfa;lsjf;asljfalsjdfoqwjeofasf;dasdfjqwjfalsjdfoasjdfliasujjqwe;ofja;sldghoqigvopiegnpowniuegopwrgcwpmgyorwenprovtuypenorcutowutpoweiut",
+            "author": "him",
+            "id": 3
+        }
+
+    ]
+}
