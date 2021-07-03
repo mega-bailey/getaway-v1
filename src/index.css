@@ -53,15 +53,15 @@
 }
 
 /* ***BLOG DETAILS PAGE*** */
-.blog-details h2 {
+.trip-details h2 {
   font-size: 20px;
   color: #09967e;
   margin-bottom: 10px;
 }
-.blog-details div {
+.trip-details div {
   margin: 20px 0;
 }
-.blog-details button {
+.trip-details button {
   background: #09967e;
   color: #fff;
   border: rgba(0, 0, 0, 1);
