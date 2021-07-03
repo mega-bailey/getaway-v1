@@ -1,23 +1,37 @@
 {
-    "trips": [
-        {
-            "title": "Hawaii",
-            "body": "laskjdlfa lasjdflasj falsjdflasjdf;al sjdfa;lsj fda;l sjdf;a lskdj fas;ldf ja;lsjdfa;lsdjfasl; jdf;as ljf;asjf ;asjfa;sl jfd;a slfja;s lfja;s ldfjlasj fl;a sjf; asldjf;asljd fa;s kdj fal;sj dfal;s kdfj as;l dkfja ;slkf j aslj fa;l sjf;asl jfals jdfo qwje ofasf; dasd fjqw jfal sjdf oas jd fl iasu jjq we;ofj sldgho qigvopiaeg npowniuegop wrgcw pmgyor wenp rov tuy peno rcut owu tpow eiut",
-            "author": "me",
-            "id": 1
-        },
-        {
-            "title": "New Zealand",
-            "body": "laskjdlfa lasjdflasj falsjdflasjdf;al sjdfa;lsj fda;l sjdf;a lskdj fas;ldf ja;lsjdfa;lsdjfasl; jdf;as ljf;asjf ;asjfa;sl jfd;a slfja;s lfja;s ldfjlasj fl;a sjf; asldjf;asljd fa;s kdj fal;sj dfal;s kdfj as;l dkfja ;slkf j aslj fa;l sjf;asl jfals jdfo qwje ofasf; dasd fjqw jfal sjdf oas jd fl iasu jjq we;ofj sldgho qigvopiaeg npowniuegop wrgcw pmgyor wenp rov tuy peno rcut owu tpow eiut",
-            "author": "you",
-            "id": 2
-        },
-        {
-            "title": "London",
-            "body": "laskjdlfa lasjdflasj falsjdflasjdf;al sjdfa;lsj fda;l sjdf;a lskdj fas;ldf ja;lsjdfa;lsdjfasl; jdf;as ljf;asjf ;asjfa;sl jfd;a slfja;s lfja;s ldfjlasj fl;a sjf; asldjf;asljd fa;s kdj fal;sj dfal;s kdfj as;l dkfja ;slkf j aslj fa;l sjf;asl jfals jdfo qwje ofasf; dasd fjqw jfal sjdf oas jd fl iasu jjq we;ofj sldgho qigvopiaeg npowniuegop wrgcw pmgyor wenp rov tuy peno rcut owu tpow eiut",
-            "author": "him",
-            "id": 3
-        }
-
-    ]
+  "trips": [
+    {
+      "title": "Hawaii",
+      "body": "laskjdlfa lasjdflasj falsjdflasjdf;al sjdfa;lsj fda;l sjdf;a lskdj fas;ldf ja;lsjdfa;lsdjfasl; jdf;as ljf;asjf ;asjfa;sl jfd;a slfja;s lfja;s ldfjlasj fl;a sjf; asldjf;asljd fa;s kdj fal;sj dfal;s kdfj as;l dkfja ;slkf j aslj fa;l sjf;asl jfals jdfo qwje ofasf; dasd fjqw jfal sjdf oas jd fl iasu jjq we;ofj sldgho qigvopiaeg npowniuegop wrgcw pmgyor wenp rov tuy peno rcut owu tpow eiut",
+      "continent": "North America",
+      "author": "me",
+      "id": 1
+    },
+    {
+      "title": "New Zealand",
+      "body": "laskjdlfa lasjdflasj falsjdflasjdf;al sjdfa;lsj fda;l sjdf;a lskdj fas;ldf ja;lsjdfa;lsdjfasl; jdf;as ljf;asjf ;asjfa;sl jfd;a slfja;s lfja;s ldfjlasj fl;a sjf; asldjf;asljd fa;s kdj fal;sj dfal;s kdfj as;l dkfja ;slkf j aslj fa;l sjf;asl jfals jdfo qwje ofasf; dasd fjqw jfal sjdf oas jd fl iasu jjq we;ofj sldgho qigvopiaeg npowniuegop wrgcw pmgyor wenp rov tuy peno rcut owu tpow eiut",
+      "continent": "Oceania",
+      "author": "me",
+      "id": 2
+    },
+    {
+      "title": "London",
+      "body": "laskjdlfa lasjdflasj falsjdflasjdf;al sjdfa;lsj fda;l sjdf;a lskdj fas;ldf ja;lsjdfa;lsdjfasl; jdf;as ljf;asjf ;asjfa;sl jfd;a slfja;s lfja;s ldfjlasj fl;a sjf; asldjf;asljd fa;s kdj fal;sj dfal;s kdfj as;l dkfja ;slkf j aslj fa;l sjf;asl jfals jdfo qwje ofasf; dasd fjqw jfal sjdf oas jd fl iasu jjq we;ofj sldgho qigvopiaeg npowniuegop wrgcw pmgyor wenp rov tuy peno rcut owu tpow eiut",
+      "continent": "Europe",
+      "author": "me",
+      "id": 3
+    },
+    {
+      "title": "asdf",
+      "details": "adsfasdf",
+      "continent": "South America",
+      "id": 5
+    },
+    {
+      "title": "asdf",
+      "details": "asdfa",
+      "continent": "Europe",
+      "id": 6
+    }
+  ]
 }

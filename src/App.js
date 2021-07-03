@@ -4,6 +4,7 @@ import Add from './Add';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import AllTrips from './AllTrips';
 import TripDetails from './TripDetails';
+import NotFound from './NotFound';
 
 
 function App() {
@@ -24,6 +25,9 @@ function App() {
           </Route>
           <Route path="/trips/:id">
             <TripDetails />
+          </Route>
+          <Route path="*">
+            <NotFound/>
           </Route>
         </Switch>
       </div>
