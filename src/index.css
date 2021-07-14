@@ -95,7 +95,7 @@
   box-sizing: border-box;
   display: block;
 }
-.add button {
+button {
   background-color: #09967e;
   color: #fff;
   border: 0;
