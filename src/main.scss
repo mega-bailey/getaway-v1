@@ -1,9 +1,9 @@
 // ********** BASE STYLES ********** //
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&family=Syncopate:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&family=Syncopate:wght@400;700&display=swap');
 
 :root {
   --color-white: #fff;
-  --color-font: #323546;
+  --color-font: #414040;
   --color-primary: #09967e;
   --color-primary-light: #a8bace;
   --color-primary-dark: #323546;
@@ -60,6 +60,19 @@ body {
   min-height: 100vh;
 }
 
+.mt-1 {
+  margin-top: 1rem;
+}
+.mt-2 {
+  margin-top: 2rem;
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
 //////////*** LAYOUT ***//////////
 
 /* ***BASE STYLE*** */
@@ -85,12 +98,21 @@ body {
   text-decoration: none;
   padding: 6px;
   font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--color-font);
+}
+
+.navbar a:visited {
+  color: var(--color-font);
 }
 .navbar a:hover {
-  color: #414b85;
+  color: #757575;
 }
 .content {
-  margin: 20px auto;
+  // margin: 20px auto;
+
+  max-width: 800px;
+  margin: 0 auto;
   padding: 20px;
 }
 
@@ -99,6 +121,7 @@ body {
   padding: 10px 16px;
   margin: 16px 0;
   border-bottom: 1px solid #fafafa;
+  width: 33.333%;
 }
 .trip-preview:hover {
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
@@ -112,9 +135,16 @@ body {
   text-decoration: none;
 }
 
+/* ***BLOG DETAILS*** */
+.trip-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
 /* ***BLOG DETAILS PAGE*** */
 .trip-details h2 {
-  font-size: 20px;
+  font-size: 2rem;
   color: #09967e;
   margin-bottom: 10px;
 }
@@ -132,18 +162,19 @@ body {
 
 /* ***CREATE NEW BLOG FORM*** */
 .add {
-  max-width: 400px;
+  width: 100%;
+  padding: 4rem 12rem;
   margin: 0 auto;
-  text-align: center;
 }
 .add label {
   text-align: left;
   display: block;
+  font-size: 1.8rem;
 }
 .add h2 {
-  font-size: 20px;
+  font-size: 3rem;
   color: #09967e;
-  margin-bottom: 30px;
+  margin: 3rem 0;
 }
 .add input,
 .add textarea,
@@ -154,6 +185,7 @@ body {
   border: 1px solid #ddd;
   box-sizing: border-box;
   display: block;
+  font-family: inherit;
 }
 button {
   background-color: #09967e;
@@ -162,6 +194,19 @@ button {
   padding: 9px;
   border-radius: 9px;
   cursor: pointer;
+}
+.add p {
+  font-size: 1.6rem;
+}
+
+.add-title {
+  width: 50%;
+}
+.add-continent {
+  width: 50%;
+}
+.add-title-continent {
+  display: flex;
 }
 
 /* ***HOME PAGE GALLERY IMAGES*** */
@@ -192,4 +237,8 @@ h1 {
 
 .mb-1 {
   margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 2.5rem;
 }

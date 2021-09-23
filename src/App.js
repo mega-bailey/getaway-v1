@@ -1,10 +1,11 @@
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './Navbar';
 import Home from './Home';
 import Add from './Add';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import AllTrips from './AllTrips';
+import All from './All';
 import TripDetails from './TripDetails';
 import NotFound from './NotFound';
+
 
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
             <Add />
           </Route>
           <Route path="/all">
-            <AllTrips />
+            <All />
           </Route>
           <Route path="/trips/:id">
             <TripDetails />
