@@ -8,12 +8,14 @@ const Add = () => {
     const [title, setTitle] = useState('');
     const [details, setDetails] = useState('');
     const [continent, setContinent] = useState('Europe');
+    const [author, setAuthor] = useState('');
+    const [featured, setFeatured] = useState('');
     const [isPending, setIsPending] = useState(false);
     const history = useHistory();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const trip = {title, details, continent};
+        const trip = {title, details, continent, author};
 
         setIsPending(true);
 
@@ -75,6 +77,14 @@ const Add = () => {
                     value={details}
                     onChange={(e) => setDetails(e.target.value)}
                 ></textarea>
+
+                <label className="add-author">Author Name:</label>
+                <input 
+                    type="text" 
+                    required
+                    value={author}
+                    onChange={(e) => setAuthor(e.target.value)}
+                />
                 
                 {!isPending &&  <button>Add Trip</button>}
                 {isPending &&  <button disabled>Adding Trip...</button>}
@@ -82,6 +92,7 @@ const Add = () => {
                 <p> {title}</p>
                 <p> {details}</p>
                 <p> {continent}</p>
+                <p> {author}</p>
             </form>
         </div>
         </div>
