@@ -11,7 +11,7 @@ const All = () => {
             <h2>All Trips</h2>
             {error && <div>{error}...</div>}
             {isPending && <div>Loading...</div>}
-            {trips && <AllTrips trips={trips} title="All Trips" />}
+            {trips && <AllTrips trips={trips}  />}
         </div>
      );
 }
