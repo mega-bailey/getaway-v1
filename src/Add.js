@@ -9,7 +9,6 @@ const Add = () => {
     const [details, setDetails] = useState('');
     const [continent, setContinent] = useState('Europe');
     const [author, setAuthor] = useState('');
-    const [featured, setFeatured] = useState('');
     const [isPending, setIsPending] = useState(false);
     const history = useHistory();
 
@@ -19,7 +18,7 @@ const Add = () => {
 
         setIsPending(true);
 
-        fetch('http://localhost:8000/trips', {
+        fetch('https://my-json-server.typicode.com/mega-bailey/getaway-api-server/trips', {
             method: 'POST',
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify(trip)
