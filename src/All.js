@@ -3,7 +3,7 @@ import useFetch from "./useFetch";
 
 const All = () => {
 
-    const { data: trips, isPending, error } = useFetch('https://my-json-server.typicode.com/mega-bailey/getaway-api-server/trips');
+    const { data: trips, isPending, error } = useFetch('http://localhost:8000/trips');
 
 
     return ( 

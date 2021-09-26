@@ -13,7 +13,7 @@
   --color-grey-light-3: #f0eeee;
   --color-grey-light-4: #ccc;
 
-  --color-grey-dark-1: #333;
+  --color-grey-dark-1: rgb(39, 39, 39);
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
 
@@ -100,11 +100,12 @@ body {
   padding: 6px;
   font-size: 1.4rem;
   font-weight: 300;
-  color: var(--color-font);
+  color: var(--color-white);
 }
 
 .navbar a:visited {
   color: var(--color-font);
+  color: var(--color-white);
 }
 .navbar a:hover {
   color: #757575;
