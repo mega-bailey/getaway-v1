@@ -1,8 +1,5 @@
 import { useState } from "react";
 import {useHistory} from 'react-router-dom';
-import Hawaii from './imgs/main-hawaii.jpg';
-import Italy from './imgs/main-italy.jpg';
-import Jordan from './imgs/main-jordan.jpg';
 
 const Add = () => {
     const [title, setTitle] = useState('');
@@ -18,7 +15,7 @@ const Add = () => {
 
         setIsPending(true);
 
-        fetch('http://localhost:8000/trips', {
+        fetch('http://localhost:8000/trips/', {
             method: 'POST',
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify(trip)
@@ -32,19 +29,7 @@ const Add = () => {
 
     return ( 
 
-        <div>
-             <div className="gallery">
-                <figure className="gallery-item">
-                    <img src={Italy} alt="Pragser Wildsee, Italy by Ales Krivec" className="gallery-img"/>
-                </figure>
-                <figure className="gallery-item">
-                    <img src={Jordan} alt="Aqaba, Jordan by Juli Kosolapova" className="gallery-img" />
-                </figure>
-                <figure className="gallery-item">
-                    <img src={Hawaii} alt="Maui, Hawaii by Ethan Robertson" className="gallery-img"/>
-                </figure>
-            </div>
-        
+      
         <div className="add">
             <h2>Add a New Trip</h2>
             <form onSubmit={handleSubmit}>
@@ -94,7 +79,7 @@ const Add = () => {
                 <p> {author}</p>
             </form>
         </div>
-        </div>
+        
      );
 }
  

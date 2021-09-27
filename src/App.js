@@ -5,15 +5,16 @@ import Add from './Add';
 import All from './All';
 import TripDetails from './TripDetails';
 import NotFound from './NotFound';
+import Footer from './Footer';
 
 
 
 function App() {
   return (
    <Router>
-    <div className="App">
+    <div className="app">
     <Navbar/>
-      <div className="">
+      <div className="main-content">
         <Switch>
           <Route exact path="/">
             <Home />
@@ -32,6 +33,7 @@ function App() {
           </Route>
         </Switch>
       </div>
+      <Footer/>
     </div>
   </Router>
   );
