@@ -2,22 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&family=Montserrat:wght@300,400,500,600,700&family=Syncopate:wght@400;700&display=swap');
 
 :root {
-  --color-primary-light: #a8bace;
-  --color-primary-dark: #323546;
-
-  --color-grey-dark-1: #272727;
-  --color-grey-dark-2: #777;
-  --color-grey-dark-3: #999;
-
-  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
-  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
-
-  --line: 1px solid var(--color-grey-light-2);
-
   --color-primary: #19a193;
+  --color-primary-dark: #088772;
   --color-white: #fff;
   --color-font: #444444;
-  --color-accent: #1c77c3;
+  --color-accent-1: #1c77c3;
+  --color-accent-2: #f39237;
+  --color-accent-3: #d63230;
   --color-dark: #1e1e24;
 
   --logo-size: 3rem;
@@ -83,6 +74,29 @@ body {
 .page-title {
   font-size: 3rem;
   font-family: var(--font-accent);
+  font-weight: 500;
+}
+
+button {
+  background: var(--color-primary);
+  border: none;
+  padding: 10px 17px;
+  border-radius: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+button:hover {
+  background: var(--color-primary-dark);
+  //border: rgba(0, 0, 0, 1);
+  // padding: 10px 15px;
+  // border-radius: 13px;
+  cursor: pointer;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+}
+.trip-details button a {
+  text-decoration: none;
+  color: var(--color-white);
+  font-size: 1.6rem;
   font-weight: 500;
 }
 
@@ -162,19 +176,6 @@ hr {
 .trip-details div {
   margin: 2rem 0;
 }
-.trip-details button {
-  background: var(--color-primary);
-  border: rgba(0, 0, 0, 1);
-  padding: 10px 15px;
-  border-radius: 13px;
-  cursor: pointer;
-}
-.trip-details button a {
-  text-decoration: none;
-  color: var(--color-white);
-  font-size: 1.6rem;
-  font-weight: 700;
-}
 
 .trip-details img {
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
@@ -185,14 +186,20 @@ hr {
 
 /* ***ADD NEW TRIP PAGE*** */
 .add {
-  width: 100%;
-  padding: 4rem 12rem;
+  width: 70%;
   margin: 0 auto;
+}
+.add form {
+  padding: 5rem;
 }
 .add label {
   text-align: left;
-  display: block;
-  font-size: 1.8rem;
+  display: inline-block;
+  font-weight: 500;
+  line-height: 0.8;
+}
+.add label:not(:first-child) {
+  margin-top: 3rem;
 }
 .add input,
 .add textarea,
@@ -200,31 +207,15 @@ hr {
   width: 100%;
   padding: 6px 10px;
   margin: 10px 0;
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-dark);
   box-sizing: border-box;
+  border-radius: 5px;
   display: block;
   font-family: inherit;
 }
-button {
-  background-color: var(--color-primary);
-  color: #fff;
-  border: 0;
-  padding: 9px;
-  border-radius: 9px;
-  cursor: pointer;
-}
+
 .add p {
   font-size: 1.6rem;
-}
-
-.add-title {
-  width: 50%;
-}
-.add-continent {
-  width: 50%;
-}
-.add-title-continent {
-  display: flex;
 }
 
 /* ***HOME PAGE HEADER/GALLERY IMAGES*** */

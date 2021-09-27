@@ -30,18 +30,18 @@ const Add = () => {
     return ( 
 
       
-        <div className="add">
+        <div className="add content">
             <h2 className="page-title text-center">Add a New Trip</h2>
             <form onSubmit={handleSubmit}>
-                <div className="add-title-continent">
-                <label className="add-title">Trip Title:</label>
+                
+                <label >Trip Title:</label>
                 <input 
                     type="text" 
                     required
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
                 />
-                <label className="add-continent">Continent:</label>
+                <label >Continent:</label>
                 <select
                     value={continent}
                     onChange={(e) => setContinent(e.target.value)}
@@ -54,7 +54,7 @@ const Add = () => {
                     <option value="Oceania/Australia">Oceania/Australia</option>
                     <option value="Antarctica">Antarctica</option>
                 </select>
-                </div>
+                
                 <label>Trip Details:</label>
                 <textarea 
                     required
