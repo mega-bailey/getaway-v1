@@ -22,7 +22,7 @@ const TripDetails = () => {
             {error && <div>{error}</div>}
             { trip && (
                 <article >
-                    <div className="trip-details-text">
+                    <div className="trip-details-text flex-item">
                     <h2 >{trip.title}</h2>
                     <h3 >{trip.continent}</h3>
                     <h4 className="mt-1">Added by: {trip.author}</h4>
@@ -32,7 +32,7 @@ const TripDetails = () => {
                    
                     <button><Link to="/all">All Trips</Link></button>
                     </div>
-                    <div className="trip-details-img">
+                    <div className="trip-details-img flex-item">
                     <img src={`https://megan-bailey.com/img/getawayv1-img/${trip.id}.jpg`} alt={trip.title} className="gallery-img"/> 
                     </div>
                 </article>

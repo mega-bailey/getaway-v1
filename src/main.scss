@@ -63,8 +63,8 @@ body {
 
 .app {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
 }
 
 //////////*** LAYOUT ***//////////
@@ -141,12 +141,13 @@ hr {
 }
 
 /* ***TRIP:ID DETAILS PAGE*** */
-.trip-details {
+.trip-details article {
   display: flex;
   width: 100%;
+  justify-content: space-between;
 }
 .trip-details-text {
-  width: 60%;
+  width: 50%;
 }
 .trip-details-img {
   width: 40%;
@@ -159,7 +160,7 @@ hr {
   font-weight: 300;
 }
 .trip-details div {
-  margin: 20px 0;
+  margin: 2rem 0;
 }
 .trip-details button {
   background: var(--color-primary);
