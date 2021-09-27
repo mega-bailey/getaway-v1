@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 
 const TripDetails = () => {
     const {id} = useParams();
-    const {data: trip, isPending, error } = useFetch('http://localhost:8000/trips/' + id);
+    const {data: trip, isPending, error } = useFetch('https://my-json-server.typicode.com/mega-bailey/getaway-api-server/trips/' + id);
     const history = useHistory();
 
     // const handleClick = () => {

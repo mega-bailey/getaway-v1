@@ -7,8 +7,7 @@ import Jordan from './imgs/main-jordan.jpg';
 
 const Home = () => {
 
-// const {data: trips, isPending, error} = useFetch('https://my-json-server.typicode.com/mega-bailey/getaway-api-server/trips');
-const {data: trips, isPending, error} = useFetch('http://localhost:8000/trips/');
+const {data: trips, isPending, error} = useFetch('https://my-json-server.typicode.com/mega-bailey/getaway-api-server/trips/');
 
     return ( 
         <div>
