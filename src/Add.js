@@ -70,9 +70,9 @@ const Add = () => {
                     onChange={(e) => setAuthor(e.target.value)}
                 />
                 
-                {!isPending &&  <button>Add Trip</button>}
+                {!isPending &&  <button className="mt-2">Add Trip</button>}
                 {isPending &&  <button disabled>Adding Trip...</button>}
-                <div className="mt-2"></div>
+                <div className="mt-3 mb-3"><hr/></div>
                 <p> {title}</p>
                 <p> {details}</p>
                 <p> {continent}</p>

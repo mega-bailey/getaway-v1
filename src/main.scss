@@ -23,6 +23,40 @@ $bp-medium: 56.25em; // 900px
 $bp-small: 37.5em; // 600px
 $bp-smallest: 31.25em; // 500px
 
+//MEDIA QUERIES
+@mixin respond($breakpoint) {
+  @if $breakpoint == xsphone {
+    @media only screen and (max-width: 25em) {
+      @content;
+    } //400px
+  }
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } //600px
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } //900px
+  }
+  @if $breakpoint == tab-collapse {
+    @media only screen and (max-width: 65.62em) {
+      @content;
+    } //1050px
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } //1200px
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } //1800
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -37,9 +71,18 @@ $bp-smallest: 31.25em; // 500px
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+  -webkit-text-size-adjust: 100%;
 
-  @media only screen and (max-width: $bp-large) {
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) {
     font-size: 50%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%;
   }
 }
 
@@ -52,13 +95,38 @@ body {
   min-height: 100vh;
 }
 
+/* ***BOOSTRAP STYLES*** */
+.text-center {
+  text-align: center;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.mt-1 {
+  margin-top: 1rem;
+}
+.mt-2 {
+  margin-top: 2rem;
+}
+.mt-3 {
+  margin-top: 3rem;
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.mb-2 {
+  margin-bottom: 2rem;
+}
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+/* ***MAIN STYLES*** */
 .app {
   min-height: 100vh;
   // display: flex;
   // flex-direction: column;
 }
-
-//////////*** LAYOUT ***//////////
 .logo {
   color: var(--color-primary);
   font-family: var(--font-logo);
@@ -70,43 +138,107 @@ body {
 }
 .content {
   padding: 4rem 8rem;
+  @include respond(tab-port) {
+    padding: 3rem 3rem;
+  }
+  @include respond(phone) {
+    padding: 2rem 2rem;
+  }
+  @include respond(xsphone) {
+    padding: 1rem 1rem;
+  }
 }
 .page-title {
   font-size: 3rem;
   font-family: var(--font-accent);
   font-weight: 500;
 }
-
+hr {
+  width: 70%;
+  margin: 0 auto;
+  border-top: 1px solid var(--color-dark);
+}
 button {
   background: var(--color-primary);
+  color: var(--color-white);
   border: none;
   padding: 10px 17px;
   border-radius: 13px;
   cursor: pointer;
   transition: all 0.2s ease-in;
+  font-size: 1.6rem;
+  font-weight: 500;
 }
 button:hover {
   background: var(--color-primary-dark);
-  //border: rgba(0, 0, 0, 1);
-  // padding: 10px 15px;
-  // border-radius: 13px;
   cursor: pointer;
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
 }
-.trip-details button a {
+button a {
   text-decoration: none;
   color: var(--color-white);
   font-size: 1.6rem;
   font-weight: 500;
 }
 
+/* ***HOME PAGE HEADER/GALLERY IMAGES*** */
+
+.gallery {
+  display: flex;
+  width: 100%;
+}
+.gallery-img {
+  width: 100%;
+  display: block;
+}
+
+/* ***NAVBAR*** */
+.navbar {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  background-color: var(--color-white);
+  width: 100%;
+  @include respond(phone) {
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 1rem 1rem 2rem 0;
+  }
+}
+.navbar h1 {
+  color: var(--color-primary);
+  font-family: var(--font-logo);
+  font-size: var(--logo-size);
+}
+.navbar .links {
+  margin-left: auto;
+}
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--color-dark);
+  transition: all 0.2s ease-in;
+  @include respond(phone) {
+    padding: 3px;
+  }
+}
+.navbar a:last-child {
+  margin-right: 16px;
+}
+.navbar a:visited {
+  color: var(--color-dark);
+}
+.navbar a:hover {
+  color: var(--color-primary);
+}
+
 /* ***HOME PAGE *** */
 .heading-primary h2 {
   font-size: 2rem;
-}
-hr {
-  width: 70%;
-  margin: 0 auto;
 }
 
 /* ***TRIP LIST-PREVIEW STYLE*** */
@@ -146,6 +278,9 @@ hr {
   font-family: var(--font-accent);
   font-size: 1.8rem;
   font-weight: 500;
+  @include respond(phone) {
+    font-size: 1.4rem;
+  }
 }
 .alltrips-list a {
   color: var(--font-primary);
@@ -159,12 +294,21 @@ hr {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  @include respond(tab-port) {
+    display: inline;
+  }
 }
 .trip-details-text {
   width: 50%;
+  @include respond(tab-port) {
+    width: 100%;
+  }
 }
 .trip-details-img {
   width: 40%;
+  @include respond(tab-port) {
+    width: 100%;
+  }
 }
 .trip-details h2 {
   font-size: 3rem;
@@ -191,6 +335,12 @@ hr {
 }
 .add form {
   padding: 5rem;
+  @include respond(tab-port) {
+    padding: 3rem;
+  }
+  @include respond(phone) {
+    padding: 1rem 1rem;
+  }
 }
 .add label {
   text-align: left;
@@ -216,53 +366,6 @@ hr {
 
 .add p {
   font-size: 1.6rem;
-}
-
-/* ***HOME PAGE HEADER/GALLERY IMAGES*** */
-
-.gallery {
-  display: flex;
-  width: 100%;
-}
-.gallery-img {
-  width: 100%;
-  display: block;
-}
-
-/* ***NAVBAR*** */
-.navbar {
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
-  background-color: var(--color-white);
-  width: 100%;
-}
-.navbar h1 {
-  color: var(--color-primary);
-  font-family: var(--font-logo);
-  font-size: var(--logo-size);
-}
-.navbar .links {
-  margin-left: auto;
-}
-.navbar a {
-  margin-left: 16px;
-  text-decoration: none;
-  padding: 10px;
-  font-size: 1.4rem;
-  font-weight: 500;
-  color: var(--color-dark);
-  transition: all 0.2s ease-in;
-}
-.navbar a:last-child {
-  margin-right: 16px;
-}
-.navbar a:visited {
-  color: var(--color-dark);
-}
-.navbar a:hover {
-  color: var(--color-primary);
 }
 
 /* ***FOOTER*** */
@@ -297,30 +400,4 @@ hr {
   color: var(--color-white);
   padding-top: 3rem;
   font-size: 1.1rem;
-}
-
-/* ***BOOSTRAP STYLES*** */
-.text-center {
-  text-align: center;
-}
-.text-uppercase {
-  text-transform: uppercase;
-}
-.mt-1 {
-  margin-top: 1rem;
-}
-.mt-2 {
-  margin-top: 2rem;
-}
-.mt-3 {
-  margin-top: 3rem;
-}
-.mb-1 {
-  margin-bottom: 1rem;
-}
-.mb-2 {
-  margin-bottom: 2rem;
-}
-.mb-3 {
-  margin-bottom: 3rem;
 }
