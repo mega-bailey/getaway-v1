@@ -8,7 +8,7 @@ const All = () => {
 
     return ( 
         <div className="alltrips content">
-            <h2>All Trips</h2>
+            <h2 class="text-center page-title">All Trips</h2>
             {error && <div>{error}...</div>}
             {isPending && <div>Loading...</div>}
             {trips && <AllTrips trips={trips}  />}

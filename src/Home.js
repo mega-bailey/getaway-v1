@@ -24,14 +24,15 @@ const {data: trips, isPending, error} = useFetch('http://localhost:8000/trips/')
                 </figure>
             </div>
         
-            <div className="content welcome-text">
-                <div>
-                <h1>Getaway</h1>
-                <h2>Share your trips with others and gather inspiration for your next getaway</h2>
+            <div className="content">
+                <div className="text-center heading-primary">
+                <h1 className="logo">Getaway</h1>
+                <h2 className="mb-3">Share your trips with others and gather inspiration for your next getaway!</h2>
                 </div>
+                <hr/>
                 {error && <div>{error}</div>}
                 {isPending && <div>Loading...</div>}
-                <h3 className="mt-2">Featured Trips</h3>
+                <h3 className="page-title text-center mt-3">Featured Trips</h3>
                 {trips && <AllTrips trips={trips.filter((trip) => trip.featured === 'featured')} /> } 
                 
             </div>

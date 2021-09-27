@@ -22,14 +22,19 @@ const TripDetails = () => {
             {error && <div>{error}</div>}
             { trip && (
                 <article >
+                    <div className="trip-details-text">
                     <h2 >{trip.title}</h2>
                     <h3 >{trip.continent}</h3>
-                    <h4>Added by: {trip.author}</h4>
-                    <div>{trip.details}</div>
+                    <h4 className="mt-1">Added by: {trip.author}</h4>
+                    <div><p>{trip.details}</p></div>
                     {/* <div className="trip-details-img"></div> */}
                     {/* <button onClick={handleClick}>Delete Trip</button> */}
-                    <Link to="/">Home</Link>
-                    <Link to="/all">All Trips</Link>
+                   
+                    <button><Link to="/all">All Trips</Link></button>
+                    </div>
+                    <div className="trip-details-img">
+                    <img src={`https://megan-bailey.com/img/getawayv1-img/${trip.id}.jpg`} alt={trip.title} className="gallery-img"/> 
+                    </div>
                 </article>
             )}
 

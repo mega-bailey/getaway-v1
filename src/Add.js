@@ -31,7 +31,7 @@ const Add = () => {
 
       
         <div className="add">
-            <h2>Add a New Trip</h2>
+            <h2 className="page-title text-center">Add a New Trip</h2>
             <form onSubmit={handleSubmit}>
                 <div className="add-title-continent">
                 <label className="add-title">Trip Title:</label>
